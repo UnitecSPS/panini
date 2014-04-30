@@ -1,0 +1,25 @@
+<h1>Paises en el Panini</h1>
+<p>Estos son los paises que han calificado al mundial de Brasil 2014</p>
+<% if @countries.any? %>
+	<% if flash[:notice] %>
+		<div><em><%= flash[:notice] %></em></div>
+	<% end %>
+	<table border="1">
+		<tr>
+			<th>Posicion</th>
+			<th>Nombre</th>
+			<th>Email</th>
+		</tr>
+		<% @countries.each do |country| %>
+			<tr>
+				<td><%= country.position %></td>
+				<td><%= link_to country.name, country %></td>
+				<td><%= country.email %></td>
+			</tr>
+		<% end %>
+	</table>
+<% else %>
+	<em><strong>No hay Paises Agregados aun!</strong></em>
+<% end %>
+<br>
+<%= link_to "Agregar Pais", new_country_path %>

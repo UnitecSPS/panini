@@ -19,9 +19,17 @@ class CountriesController < ApplicationController
   end
 
   def edit
+    @country = Country.find(params[:id])
   end
 
   def update
+    @country = Country.find(params[:id])
+
+    if @country.update(country_params)
+      redirect_to @country
+    else
+      render :edit
+    end
   end
 
   def show

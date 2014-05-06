@@ -1,0 +1,13 @@
+<% if object.errors.any? %>
+	<div>
+		<h3>Hay Errores:</h3>
+		<table>
+			<% object.errors.full_messages.each do |msg| %>
+				<tr>
+					<td bgcolor="yellow"><em><%= msg %></em></td>
+				</tr>
+			<% end %>
+		</table>
+	</div>
+	<br>
+<% end %>

@@ -1,2 +1,10 @@
-<h1>Countries#edit</h1>
-<p>Find me in app/views/countries/edit.html.erb</p>
+<h1>Editar Pais</h1>
+<h2><%= @country.name %></h2>
+
+<%= render partial: "shared/error_partial", locals: { object: @country } %>
+
+<%= render "form" %>
+
+<ul>
+	<li><%= link_to "Cancelar", @country %></li>
+</ul>

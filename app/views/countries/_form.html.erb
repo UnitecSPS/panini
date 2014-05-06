@@ -1,0 +1,21 @@
+<%= form_for(@country) do |f| %>
+	<div>
+		<%= f.label :position, "Posicion" %>
+		<%= f.number_field :position %>
+	</div>
+	<div>
+		<%= f.label :name, "Nombre" %>
+		<%= f.text_field :name %>
+	</div>
+	<div>
+		<%= f.label :email %>
+		<%= f.email_field :email %>
+	</div>
+	<div>
+		<%= f.label :url %>
+		<%= f.text_field :url %>
+	</div>
+	<div>
+		<%= f.submit %>
+	</div>
+<% end %>

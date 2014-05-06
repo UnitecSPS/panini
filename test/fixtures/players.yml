@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  number: 1
+  birthday: 2014-05-06 03:10:23
+  height: 9.99
+  team: MyString
+  country_id: 
+
+two:
+  name: MyString
+  number: 1
+  birthday: 2014-05-06 03:10:23
+  height: 9.99
+  team: MyString
+  country_id: 

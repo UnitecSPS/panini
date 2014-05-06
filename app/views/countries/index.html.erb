@@ -10,13 +10,7 @@
 			<th>Nombre</th>
 			<th>Email</th>
 		</tr>
-		<% @countries.each do |country| %>
-			<tr>
-				<td><%= country.position %></td>
-				<td><%= link_to country.name, country %></td>
-				<td><%= country.email %></td>
-			</tr>
-		<% end %>
+		<%= render @countries %>
 	</table>
 <% else %>
 	<em><strong>No hay Paises Agregados aun!</strong></em>

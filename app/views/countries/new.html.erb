@@ -1,40 +1,9 @@
 <h1>Agregar Pais</h1>
 
-<% if @country.errors.any? %>
-	<div>
-		<h3>Hay Errores:</h3>
-		<table>
-			<% @country.errors.full_messages.each do |msg| %>
-				<tr>
-					<td bgcolor="yellow"><em><%= msg %></em></td>
-				</tr>
-			<% end %>
-		</table>
-	</div>
-	<br>
-<% end %>
+<%= render partial: "shared/error_partial", locals: { object: @country } %>
 
-<%= form_for(@country) do |f| %>
-	<div>
-		<%= f.label :position, "Posicion" %>
-		<%= f.number_field :position %>
-	</div>
-	<div>
-		<%= f.label :name, "Nombre" %>
-		<%= f.text_field :name %>
-	</div>
-	<div>
-		<%= f.label :email %>
-		<%= f.email_field :email %>
-	</div>
-	<div>
-		<%= f.label :url %>
-		<%= f.text_field :url %>
-	</div>
-	<div>
-		<%= f.submit %>
-	</div>
-<% end %>
+<%= render "form" %>
+
 <ul>
 	<li><%= link_to "Cancelar", countries_path %></li>
 </ul>

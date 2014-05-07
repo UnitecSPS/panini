@@ -2,6 +2,9 @@
 <p><strong>Posicion:</strong><%= @country.position %></p>
 <p><strong>Email:</strong><%= @country.email %></p>
 <p><strong>URL:</strong><%= link_to "Pagina Oficial", @country.url %></p>
+
+<%= render partial: "players/table", locals: { country: @country } %>
+
 <p>
 	<ul>
 		<li><%= link_to "Editar", edit_country_path(@country) %></li>

@@ -1,4 +1,5 @@
 Panini::Application.routes.draw do
+
   resources :countries do
     resources :players
   end

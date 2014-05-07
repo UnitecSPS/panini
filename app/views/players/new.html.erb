@@ -1,0 +1,31 @@
+<h1>Nuevo Player</h1>
+
+<%= render partial: "shared/error_partial", locals: { object: @player } %>
+
+<div>
+<%= form_for([@country, @player]) do |f| %>
+	<div>
+		<%= f.label :number, "Numero de Vista" %>
+		<%= f.number_field :number %>
+	</div>
+	<div>
+		<%= f.label :name, "Nombre" %>
+		<%= f.text_field :name %>
+	</div>
+	<div>
+		<%= f.label :birthday, "Cumpleaños" %>
+		<%= f.datetime_select :birthday %>
+	</div>
+	<div>
+		<%= f.label :height, "Estatura" %>
+		<%= f.number_field :height %>
+	</div>
+	<div>
+		<%= f.label :team, "Equipo" %>
+		<%= f.text_field :team %>
+	</div>
+	<div>
+		<%= f.submit %>
+	</div>
+<% end %>
+</div>

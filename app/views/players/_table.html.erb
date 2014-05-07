@@ -1,0 +1,19 @@
+<table border="1">
+	<tr>
+		<th>Numero</th>
+		<th>Nombre</th>
+		<th>Estatura</th>
+		<th>Cumpleaños</th>
+		<th>Equipo</th>
+	</tr>
+	<% country.players.each do |player| %>
+		<tr>
+			<td><%= player.number %></td>
+			<td><%= link_to player.name, edit_country_player_path(country,player) %></td>
+			<td><%= player.height %></td>
+			<td><%= player.formatted_birthday %></td>
+			<td><%= player.team %></td>
+		</tr>
+	<% end %>
+</table>
+<p><%= link_to "Nueva Vista", new_country_player_path(country) %></p>

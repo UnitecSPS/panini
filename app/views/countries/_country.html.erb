@@ -2,4 +2,6 @@
 	<td><%= country.position %></td>
 	<td><%= link_to country.name, country %></td>
 	<td><%= country.email %></td>
+	<td><%= link_to "Ver", own_country_path(country) %></td>
+	<td><%= link_to "Ver", missing_country_path(country) %></td>
 </tr>

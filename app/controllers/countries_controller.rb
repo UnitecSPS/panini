@@ -39,6 +39,19 @@ class CountriesController < ApplicationController
   def destroy
   end
 
+  def report
+  end
+
+  def own
+    @country = Country.find(params[:id])
+    @owns = @country.players.own
+  end
+
+  def missing
+    @country = Country.find(params[:id])
+    @missing = @country.players.missing
+  end
+
   private
 
   	def country_params

@@ -1,7 +1,14 @@
 Panini::Application.routes.draw do
 
   resources :countries do
-    resources :players
+    resources :players, except: [:index, :destroy, :show]
+    member do
+      get "own"
+      get "missing"
+    end
+    collection do
+      get "report"
+    end
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

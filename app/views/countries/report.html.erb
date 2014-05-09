@@ -1,0 +1,17 @@
+<h1>Reporte de vistas general</h1>
+<p>
+	<strong>Vistas totales del album:</strong>
+	<%= Player.count %>
+</p>
+<p>
+	<strong>Vistas unicas que tengo:</strong>
+	<%= "#{Player.own.count} - #{percentage}" %>
+</p>
+<p>
+	<strong>Vistas totales que me hacen falta:</strong>
+	<%= Player.missing.count %>
+</p>
+<p>
+	<strong>Vistas totales que tengo:</strong>
+	<%= Player.sum(:quantity) %>
+</p>

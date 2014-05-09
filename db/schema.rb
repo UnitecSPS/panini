@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140506031023) do
+ActiveRecord::Schema.define(version: 20140509020738) do
 
   create_table "countries", force: true do |t|
     t.string   "name"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20140506031023) do
     t.integer  "country_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "quantity",   default: 0
   end
 
   add_index "players", ["country_id"], name: "index_players_on_country_id"

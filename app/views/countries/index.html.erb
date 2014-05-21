@@ -1,10 +1,16 @@
-<h1>Paises en el Panini</h1>
+<article class="is-post is-post-excerpt">
+	<header>
+   	<h2>Paises en el Panini</h2>
+      <span class="byline">Listado de paises clasificados a Brasil 2014!</span> 
+	</header>
+</article>
 <%= index_description %>
 <% if @countries.any? %>
 	<% if flash[:notice] %>
 		<div><em><%= flash[:notice] %></em></div>
 	<% end %>
-	<table border="1">
+	<table class="bordered">
+		<thead>
 		<tr>
 			<th>Posicion</th>
 			<th>Nombre</th>
@@ -12,6 +18,7 @@
 			<th>Tengo</th>
 			<th>Me falta</th>
 		</tr>
+		</thead>
 		<%= render @countries %>
 	</table>
 <% else %>

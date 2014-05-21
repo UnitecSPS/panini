@@ -1,7 +1,10 @@
-<h1><%= @country.name %></h1>
-<p><strong>Posicion:</strong><%= @country.position %></p>
-<p><strong>Email:</strong><%= @country.email %></p>
-<p><strong>URL:</strong><%= link_to "Pagina Oficial", @country.url %></p>
+<article class="is-post is-post-excerpt">
+	<header>
+   	<h2><%= @country.name %></h2>
+      <span class="byline"><strong>Posicion:</strong><%= @country.position %>&nbsp;&nbsp;<strong>Email:</strong><%= @country.email %>&nbsp;&nbsp;<strong>URL:</strong><%= link_to "Pagina Oficial", @country.url %></span> 
+	</header>
+	<%= render partial: "shared/social_shares" %>
+</article>
 
 <%= render partial: "players/table", locals: { country: @country } %>
 

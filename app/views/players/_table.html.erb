@@ -1,10 +1,12 @@
-<table border="1">
+<table class="bordered">
+	<thead>
 	<tr>
 		<th>Numero</th>
 		<th>Nombre</th>
 		<th>Cumpleaños</th>
 		<th>Equipo</th>
 	</tr>
+	</thead>
 	<% country.players.each do |player| %>
 		<tr>
 			<td><%= player.number %></td>

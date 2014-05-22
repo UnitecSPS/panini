@@ -2,17 +2,19 @@
 <html>
 <head>
   <title>Panini</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag    "external", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "external", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-<table>
-	<tr>
-		<td><%= link_to "PAISES", countries_path %></td>
-	</tr>
-</table>
-<div id="content" style="background-color:#FFA500;">
+	<div id="topPan">
+	  <ul>
+	    <li class="menupadding"><%= link_to "Paises", countries_path %></li>
+	    <li class="menupadding"><%= link_to "Reporte", report_countries_path %></li>
+	  </ul>
+	  <h1>ALBUM PANINI</h1>
+	</div>
+<div id="bodyPan">
 <%= yield %>
 </div>
 </body>

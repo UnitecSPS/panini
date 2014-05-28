@@ -1,5 +1,4 @@
 Panini::Application.routes.draw do
-
   resources :countries do
     resources :players, except: [:index, :destroy, :show]
     member do
@@ -10,6 +9,15 @@ Panini::Application.routes.draw do
       get "report"
     end
   end
+
+  get "/signup" => "users#new", as: :join
+  get "/profile" => "users#show"
+  resources :users, only: [:create, :edit, :update]
+
+  #sessions
+  get "/login" => "session#new"
+  post "/login" => "session#create", as: :enter
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

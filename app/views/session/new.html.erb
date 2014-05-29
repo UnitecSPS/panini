@@ -5,6 +5,12 @@
 	</header>
 </article>
 
+<% if flash[:notice] %>
+	<div>
+		<em><%= flash[:notice] %></em>
+	</div>
+<% end %>
+
 <%= form_tag enter_path do %>
 	<div>
 		<%= label_tag :email %>

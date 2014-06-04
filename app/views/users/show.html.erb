@@ -1,2 +1,8 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<article class="is-post is-post-excerpt">
+	<header>
+   	<h2><%= current_user.full_name %></h2>
+      <span class="byline"><strong>Email:</strong><%= current_user.email %></span> 
+	</header>
+	<%= render partial: "shared/social_shares" %>
+</article>
+<%= link_to "EDIT", edit_user_path(current_user.id) %>

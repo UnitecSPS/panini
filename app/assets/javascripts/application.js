@@ -14,3 +14,11 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require_self
+
+$( document ).ready(function() {
+	$( document ).on( "click", ".link-country", function() {
+  	name = $(this).data("name");
+  	alert("Clicking on " + name);
+	});
+});

@@ -10,7 +10,7 @@
 <%= form_tag enter_path do %>
 	<div>
 		<%= label_tag :email %>
-		<%= email_field_tag :email %>
+		<%= email_field_tag :email, cookies.signed[:user_email]  %>
 	</div>
 	<div>
 		<%= label_tag :password %>

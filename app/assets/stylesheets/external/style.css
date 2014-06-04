@@ -3,8 +3,8 @@ body{background:url("/assets/mascot.jpg") 0 0 ; margin:84px 0 0; padding:0; font
 div, p, h1, h2, h3, ul{padding:0px; margin:0px;}
 ul{list-style-type:none;}
 /*--TOP PANEL--*/
-#topPan{width:464px; position:relative; margin:0 auto;}
-#topPan ul {width:464px;}
+#topPan{width:600px; position:relative; margin:0 auto;}
+#topPan ul {width:600px;}
 #topPan ul li{float:left; font:12px/30px "Trebuchet MS", Arial, Helvetica, sans-serif; font-weight:bold; text-transform:uppercase;}
 #topPan ul li a{width:100px; height:50px; display:block; background:url("/assets/worldcup-banner.jpg") 0 0 no-repeat #66605B; color:#FDFDFD;  text-decoration:none; text-align:center;}
 #topPan ul li a:hover{background:url("/assets/worldcup-banner.jpg") 0 0 no-repeat #66605B; color:#1A1917;}

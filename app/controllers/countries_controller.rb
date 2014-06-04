@@ -1,6 +1,17 @@
 class CountriesController < ApplicationController
   def index
   	@countries = Country.order("position ASC")
+
+    if params[:keyword]
+      @countries = @countries.where("name LIKE '%#{params[:keyword]}%'")
+    end
+
+    if request.xhr?
+      #render json: {name: "something",other: 1}.to_json, status: 200
+      render partial: "countries/table", 
+        locals: {countries: @countries}, status: 200
+      #render nothing: true, status: 200
+    end
   end
 
   def new

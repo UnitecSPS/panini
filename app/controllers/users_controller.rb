@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   skip_before_filter :authenticate, only: [:new, :create]
-
+  layout "external"
   def new
   	@user = User.new
   end

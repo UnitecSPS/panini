@@ -21,4 +21,14 @@ $( document ).ready(function() {
   	name = $(this).data("name");
   	alert("Clicking on " + name);
 	});
+
+	$(document).on("ajax:success","#form_ajax_search", function(e,data,status,xhr){
+		//alert("NOTHING!");
+		//alert(data.name);
+		$(".js_country_list").html(data);
+	});
+
+	$( document ).on( "keyup", "#keyword", function() {
+		$(".js_search_submit").click();
+	});
 });

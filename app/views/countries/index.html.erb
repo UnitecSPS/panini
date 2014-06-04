@@ -6,21 +6,15 @@
 </article>
 <%= index_description %>
 <% if @countries.any? %>
+	
+	<%= render "search" %>
+
 	<% if flash[:notice] %>
 		<div><em><%= flash[:notice] %></em></div>
 	<% end %>
-	<table class="bordered">
-		<thead>
-		<tr>
-			<th>Posicion</th>
-			<th>Nombre</th>
-			<th>Email</th>
-			<th>Tengo</th>
-			<th>Me falta</th>
-		</tr>
-		</thead>
-		<%= render @countries %>
-	</table>
+	<div class="js_country_list">
+		<%= render partial: "table", locals: { countries: @countries } %>
+	</div>
 <% else %>
 	<em><strong>No hay Paises Agregados aun!</strong></em>
 <% end %>

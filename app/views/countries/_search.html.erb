@@ -1,0 +1,6 @@
+<%= form_tag countries_path, id: "form_ajax_search",method: :get, remote: true do %>
+
+	<%= text_field_tag :keyword, nil, placeholder: "Texto a Buscar" %>
+	<%= submit_tag "Buscar", class: "js_search_submit" %>
+	
+<% end %>

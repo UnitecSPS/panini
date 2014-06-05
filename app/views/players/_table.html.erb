@@ -10,7 +10,7 @@
 	<% country.players.each do |player| %>
 		<tr>
 			<td><%= player.number %></td>
-			<td><%= link_to player.name, edit_country_player_path(country,player) %></td>
+			<td><%= link_to player.name, country_player_path(country, player) %></td>
 			<td><%= player.formatted_birthday %></td>
 			<td><%= player.team %></td>
 		</tr>

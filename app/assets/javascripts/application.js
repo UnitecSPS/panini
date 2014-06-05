@@ -28,6 +28,15 @@ $( document ).ready(function() {
 		$(".js_country_list").html(data);
 	});
 
+	$(document).on("ajax:success","#new_skill",function(e,data,status,xhr){
+		$(".js_player_skills").prepend(data);
+		$("#skill_description").val("");
+	});
+
+	$(document).on("ajax:error","#new_skill",function(e, xhr, status, error){
+		alert("Something Wrong: " + xhr.responseText);
+	});
+
 	$( document ).on( "keyup", "#keyword", function() {
 		$(".js_search_submit").click();
 	});

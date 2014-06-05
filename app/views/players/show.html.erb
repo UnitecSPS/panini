@@ -1,0 +1,15 @@
+<article class="is-post is-post-excerpt">
+	<header>
+   	<h2><%= @player.name %></h2>
+      <span class="byline">Informacion de Jugador</span> 
+	</header>
+</article>
+
+<table class="js_player_skills">
+	<%= render @player.skills %>
+</table>
+<%= form_for @player.skills.build, remote: true do |f| %>
+	<%= f.text_field :description, placeholder: "Ingrese Nuevo Skill" %>
+	<%= f.hidden_field :player_id %>
+	<%= f.submit %>
+<% end %>

@@ -3,6 +3,7 @@ class Player < ActiveRecord::Base
 	validates_inclusion_of :number, in: 0..640
 	validates_uniqueness_of :number
  	belongs_to :country
+ 	has_many :skills
 
  	default_scope order("number ASC")
  	scope :own, -> {where("quantity > 0")}

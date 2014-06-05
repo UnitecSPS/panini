@@ -1,6 +1,6 @@
 Panini::Application.routes.draw do
   resources :countries do
-    resources :players, except: [:index, :destroy, :show]
+    resources :players, except: [:index, :destroy]
     member do
       get "own"
       get "missing"
@@ -9,7 +9,7 @@ Panini::Application.routes.draw do
       get "report"
     end
   end
-
+  resources :skills, only: :create
   get "/signup" => "users#new", as: :join
   get "/profile" => "users#show"
   resources :users, only: [:create, :edit, :update]

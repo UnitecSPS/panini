@@ -1,4 +1,9 @@
 class PlayersController < ApplicationController
+  def show
+    @country = Country.find(params[:country_id])
+    @player = @country.players.find(params[:id])
+  end
+
   def new
   	@country = Country.find(params[:country_id])
   	@player = @country.players.build

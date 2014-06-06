@@ -5,6 +5,8 @@
 		<th>Nombre</th>
 		<th>Cumpleaños</th>
 		<th>Equipo</th>
+		<th>Cantidad</th>
+		<th></th>
 	</tr>
 	</thead>
 	<% country.players.each do |player| %>
@@ -13,6 +15,8 @@
 			<td><%= link_to player.name, country_player_path(country, player) %></td>
 			<td><%= player.formatted_birthday %></td>
 			<td><%= player.team %></td>
+			<td id="player_<%= player.number %>_quantity"><%= player.quantity %></td>
+			<td><%= link_to "Agregar 1", add_one_country_player_path(country, player), class: "js_add_one", method: :post, remote: true %></td>
 		</tr>
 	<% end %>
 </table>

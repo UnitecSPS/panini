@@ -40,4 +40,8 @@ $( document ).ready(function() {
 	$( document ).on( "keyup", "#keyword", function() {
 		$(".js_search_submit").click();
 	});
+
+	$(document).on("ajax:success",".js_add_one", function(e,data,status,xhr){
+		$("#player_"+data.number+"_quantity").text(data.quantity);
+	});
 });

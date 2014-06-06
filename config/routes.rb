@@ -1,6 +1,8 @@
 Panini::Application.routes.draw do
   resources :countries do
-    resources :players, except: [:index, :destroy]
+    resources :players, except: [:index, :destroy] do
+      post "add_one", on: :member
+    end
     member do
       get "own"
       get "missing"

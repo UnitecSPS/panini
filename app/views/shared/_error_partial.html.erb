@@ -1,5 +1,5 @@
 <% if object.errors.any? %>
-	<div>
+	<div id="form_errors">
 		<h3>Hay Errores:</h3>
 		<table>
 			<% object.errors.full_messages.each do |msg| %>

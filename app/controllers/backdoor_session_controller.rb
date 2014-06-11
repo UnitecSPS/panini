@@ -1,0 +1,3 @@
+class BackdoorSessionController < ApplicationController
+
+end

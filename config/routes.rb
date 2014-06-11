@@ -9,6 +9,7 @@ Panini::Application.routes.draw do
     end
     collection do
       get "report"
+      get "json_test"
     end
   end
   resources :skills, only: :create

@@ -63,6 +63,10 @@ class CountriesController < ApplicationController
     @missing = @country.players.missing
   end
 
+  def json_test
+    render json: {name: "something",other: 1}.to_json, status: 200
+  end
+
   private
 
   	def country_params

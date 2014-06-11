@@ -16,7 +16,7 @@ class Country < ActiveRecord::Base
 		end
 
 		def check_call
-			puts "Se llamo before save"
+			puts "Se llamo before save" unless Rails.env == "test"
 		end
 
 		def test

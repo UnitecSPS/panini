@@ -5,7 +5,7 @@ class Player < ActiveRecord::Base
  	belongs_to :country
  	has_many :skills
 
- 	default_scope order("number ASC")
+ 	default_scope { order("number ASC") }
  	scope :own, -> {where("quantity > 0")}
  	scope :missing, -> {where("quantity = 0")}
  	scope :repeats, -> {where("quantity > 1")}

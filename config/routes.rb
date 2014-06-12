@@ -22,6 +22,10 @@ Panini::Application.routes.draw do
   post "/login" => "session#create", as: :enter
   post "/logout" => "session#destroy"
 
+  namespace :api do
+    resources :countries, only: :index
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

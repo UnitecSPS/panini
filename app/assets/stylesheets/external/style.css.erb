@@ -1,17 +1,17 @@
 /* CSS Document */
-body{background:url("/assets/mascot.jpg") 0 0 ; margin:84px 0 0; padding:0; font:14px/20px Arial, Helvetica, sans-serif;}
+body{background:url(<%= asset_path 'mascot.jpg' %>) 0 0 ; margin:84px 0 0; padding:0; font:14px/20px Arial, Helvetica, sans-serif;}
 div, p, h1, h2, h3, ul{padding:0px; margin:0px;}
 ul{list-style-type:none;}
 /*--TOP PANEL--*/
 #topPan{width:600px; position:relative; margin:0 auto;}
 #topPan ul {width:600px;}
 #topPan ul li{float:left; font:12px/30px "Trebuchet MS", Arial, Helvetica, sans-serif; font-weight:bold; text-transform:uppercase;}
-#topPan ul li a{width:100px; height:50px; display:block; background:url("/assets/worldcup-banner.jpg") 0 0 no-repeat #66605B; color:#FDFDFD;  text-decoration:none; text-align:center;}
-#topPan ul li a:hover{background:url("/assets/worldcup-banner.jpg") 0 0 no-repeat #66605B; color:#1A1917;}
+#topPan ul li a{width:100px; height:50px; display:block; background:url(<%= asset_path 'worldcup-banner.jpg' %>) 0 0 no-repeat #66605B; color:#FDFDFD;  text-decoration:none; text-align:center;}
+#topPan ul li a:hover{background:url(<%= asset_path 'worldcup-banner.jpg' %>) 0 0 no-repeat #66605B; color:#1A1917;}
 #topPan ul li.menupadding{margin:0 0 0 1px;}
-#topPan ul li.home{width:92px; height:30px; display:block; background:url("/assets/worldcup-banner.jpg") 0 0 no-repeat #FDFDFD; color:#1A1917; text-align:center;}
+#topPan ul li.home{width:92px; height:30px; display:block; background:url(<%= asset_path 'worldcup-banner.jpg' %>) 0 0 no-repeat #FDFDFD; color:#1A1917; text-align:center;}
 
-#topPan h1{display:block; width:600px; height:195px; background:url("/assets/world-cup-sticker-album-banner.png") 0 0 no-repeat; text-indent:-2000px; margin:0; clear:both;}
+#topPan h1{display:block; width:600px; height:195px; background:url(<%= asset_path 'world-cup-sticker-album-banner.png' %>) 0 0 no-repeat; text-indent:-2000px; margin:0; clear:both;}
 
 /*--/TOP PANEL--*/
 /*--BODY PANEL--*/
